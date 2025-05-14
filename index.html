@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SONIC JOURNEY: The BLVCKHXXD Story (Revised)</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon-pink: #ff00ff;
+            --neon-blue: #00f0ff;
+            --neon-purple: #9900ff;
+            --dark-bg: #050215;
+            --text-glow: 0 0 10px rgba(255, 0, 255, 0.8);
+            --box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .parallax-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .parallax-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transform: translateZ(-1px) scale(2);
+            z-index: -1;
+        }
+        
+        .content-section {
+            min-height: 100vh;
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        .neon-border {
+            border: 2px solid var(--neon-pink);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .neon-text {
+            color: white;
+            text-shadow: var(--text-glow);
+        }
+        
+        .neon-text-blue {
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+        }
+        
+        .glitch {
+            position: relative;
+            animation: glitch-skew 1s infinite linear alternate-reverse;
+        }
+        
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00ff;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00f0ff;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+        
+        @keyframes glitch-anim {
+            0% {
+                clip: rect(5px, 9999px, 35px, 0);
+                transform: skew(0.2deg);
+            }
+            5% {
+                clip: rect(80px, 9999px, 17px, 0);
+                transform: skew(0.1deg);
+            }
+            10% {
+                clip: rect(15px, 9999px, 94px, 0);
+                transform: skew(0.5deg);
+            }
+            15% {
+                clip: rect(56px, 9999px, 98px, 0);
+                transform: skew(0.4deg);
+            }
+            20% {
+                clip: rect(32px, 9999px, 26px, 0);
+                transform: skew(0.3deg);
+            }
+            25% {
+                clip: rect(82px, 9999px, 73px, 0);
+                transform: skew(0.1deg);
+            }
+            30% {
+                clip: rect(67px, 9999px, 97px, 0);
+                transform: skew(0.6deg);
+            }
+            35% {
+                clip: rect(23px, 9999px, 31px, 0);
+                transform: skew(0.8deg);
+            }
+            40% {
+                clip: rect(70px, 9999px, 69px, 0);
+                transform: skew(0.2deg);
+            }
+            45% {
+                clip: rect(41px, 9999px, 21px, 0);
+                transform: skew(0.5deg);
+            }
+            50% {
+                clip: rect(34px, 9999px, 5px, 0);
+                transform: skew(0.7deg);
+            }
+            55% {
+                clip: rect(76px, 9999px, 65px, 0);
+                transform: skew(0.1deg);
+            }
+            60% {
+                clip: rect(51px, 9999px, 81px, 0);
+                transform: skew(0.9deg);
+            }
+            65% {
+                clip: rect(93px, 9999px, 45px, 0);
+                transform: skew(0.4deg);
+            }
+            70% {
+                clip: rect(4px, 9999px, 14px, 0);
+                transform: skew(0.2deg);
+            }
+            75% {
+                clip: rect(46px, 9999px, 61px, 0);
+                transform: skew(0.3deg);
+            }
+            80% {
+                clip: rect(73px, 9999px, 95px, 0);
+                transform: skew(0.4deg);
+            }
+            85% {
+                clip: rect(40px, 9999px, 27px, 0);
+                transform: skew(0.5deg);
+            }
+            90% {
+                clip: rect(2px, 9999px, 53px, 0);
+                transform: skew(0.6deg);
+            }
+            95% {
+                clip: rect(60px, 9999px, 87px, 0);
+                transform: skew(0.2deg);
+            }
+            100% {
+                clip: rect(92px, 9999px, 38px, 0);
+                transform: skew(0.1deg);
+            }
+        }
+        
+        @keyframes glitch-anim2 {
+            0% {
+                clip: rect(65px, 9999px, 85px, 0);
+                transform: skew(0.4deg);
+            }
+            5% {
+                clip: rect(40px, 9999px, 29px, 0);
+                transform: skew(0.3deg);
+            }
+            10% {
+                clip: rect(87px, 9999px, 73px, 0);
+                transform: skew(0.7deg);
+            }
+            15% {
+                clip: rect(16px, 9999px, 57px, 0);
+                transform: skew(0.2deg);
+            }
+            20% {
+                clip: rect(92px, 9999px, 36px, 0);
+                transform: skew(0.8deg);
+            }
+            25% {
+                clip: rect(51px, 9999px, 69px, 0);
+                transform: skew(0.5deg);
+            }
+            30% {
+                clip: rect(5px, 9999px, 79px, 0);
+                transform: skew(0.3deg);
+            }
+            35% {
+                clip: rect(45px, 9999px, 10px, 0);
+                transform: skew(0.2deg);
+            }
+            40% {
+                clip: rect(62px, 9999px, 25px, 0);
+                transform: skew(0.4deg);
+            }
+            45% {
+                clip: rect(15px, 9999px, 74px, 0);
+                transform: skew(0.6deg);
+            }
+            50% {
+                clip: rect(90px, 9999px, 27px, 0);
+                transform: skew(0.2deg);
+            }
+            55% {
+                clip: rect(42px, 9999px, 53px, 0);
+                transform: skew(0.3deg);
+            }
+            60% {
+                clip: rect(21px, 9999px, 90px, 0);
+                transform: skew(0.7deg);
+            }
+            65% {
+                clip: rect(75px, 9999px, 37px, 0);
+                transform: skew(0.5deg);
+            }
+            70% {
+                clip: rect(54px, 9999px, 21px, 0);
+                transform: skew(0.2deg);
+            }
+            75% {
+                clip: rect(35px, 9999px, 64px, 0);
+                transform: skew(0.4deg);
+            }
+            80% {
+                clip: rect(18px, 9999px, 86px, 0);
+                transform: skew(0.3deg);
+            }
+            85% {
+                clip: rect(67px, 9999px, 12px, 0);
+                transform: skew(0.1deg);
+            }
+            90% {
+                clip: rect(8px, 9999px, 43px, 0);
+                transform: skew(0.8deg);
+            }
+            95% {
+                clip: rect(30px, 9999px, 95px, 0);
+                transform: skew(0.3deg);
+            }
+            100% {
+                clip: rect(82px, 9999px, 56px, 0);
+                transform: skew(0.6deg);
+            }
+        }
+        
+        @keyframes glitch-skew {
+            0% {
+                transform: skew(1deg);
+            }
+            10% {
+                transform: skew(0deg);
+            }
+            20% {
+                transform: skew(0.5deg);
+            }
+            30% {
+                transform: skew(-0.5deg);
+            }
+            40% {
+                transform: skew(1deg);
+            }
+            50% {
+                transform: skew(-0.5deg);
+            }
+            60% {
+                transform: skew(0deg);
+            }
+            70% {
+                transform: skew(0.5deg);
+            }
+            80% {
+                transform: skew(-0.5deg);
+            }
+            90% {
+                transform: skew(1deg);
+            }
+            100% {
+                transform: skew(0deg);
+            }
+        }
+        
+        .grid-pattern {
+            background-image: linear-gradient(rgba(255, 0, 255, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 0, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: center center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: transparent;
+            border: 2px solid var(--neon-pink);
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            background-color: var(--neon-pink);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            height: 100%;
+        }
+        
+        .btn:hover {
+            color: black;
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px rgba(255, 0, 255, 0.8);
+        }
+        
+        .audio-player {
+            width: 100%;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--neon-pink), var(--neon-blue));
+            box-shadow: 0 0 8px rgba(255, 0, 255, 0.8);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -30px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--neon-pink);
+            box-shadow: 0 0 10px rgba(255, 0, 255, 1);
+        }
+        
+        .choice-container {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .choice-box {
+            flex: 1;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .choice-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
+        }
+        
+        .album-card {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .album-card img {
+            transition: all 0.5s ease;
+            width: 100%;
+            height: auto;
+        }
+        
+        .album-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .album-card-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .album-card:hover .album-card-info {
+            transform: translateY(0);
+        }
+        
+        /* Ableton Controls */
+        .ableton-interface {
+            background-color: #1E1E1E;
+            padding: 1.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+        }
+        
+        .knob-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+        
+        .knob {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 0 10px 20px;
+        }
+        
+        .knob-label {
+            text-align: center;
+            margin-top: 5px;
+            font-size: 14px;
+            color: #ddd;
+        }
+        
+        .slider-container {
+            margin-bottom: 1.5rem;
+        }
+        
+        .slider {
+            width: 100%;
+            height: 10px;
+            background: #333;
+            border-radius: 5px;
+            appearance: none;
+            outline: none;
+        }
+        
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink);
+            cursor: pointer;
+        }
+        
+        .track-container {
+            height: 80px;
+            background: #333;
+            position: relative;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        
+        .track-waveform {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+        
+        .waveform-bar {
+            width: 3px;
+            background: var(--neon-blue);
+            margin: 0 1px;
+            box-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        /* Album Popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        
+        .popup-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        
+        .popup-content {
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background-color: rgba(6, 8, 24, 0.95);
+            border: 2px solid var(--neon-pink);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+            padding: 2rem;
+            position: relative;
+            transform: scale(0.9);
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        
+        .popup-overlay.active .popup-content {
+            transform: scale(1);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--neon-pink);
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .popup-close:hover {
+            background-color: var(--neon-pink);
+            color: black;
+            transform: rotate(90deg);
+        }
+        
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        /* Nav dots */
+        .nav-dots {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 0.5rem 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-dot.active {
+            background-color: var(--neon-pink);
+            box-shadow: 0 0 10px var(--neon-pink);
+            transform: scale(1.3);
+        }
+        
+        /* Scroll indicator */
+        .scroll-downs {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            margin-left: -15px;
+            width: 30px;
+            height: 50px;
+        }
+        
+        .mousey {
+            width: 3px;
+            padding: 10px 15px;
+            height: 35px;
+            border: 2px solid var(--neon-pink);
+            border-radius: 25px;
+            box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+            opacity: 0.75;
+        }
+        
+        .scroller {
+            width: 3px;
+            height: 10px;
+            border-radius: 25%;
+            background-color: var(--neon-pink);
+            box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+            animation-name: scroll;
+            animation-duration: 2.5s;
+            animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes scroll {
+            0% { opacity: 0; transform: translateY(0); }
+            10% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(15px); }
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .parallax-container {
+                height: 60vh;
+            }
+            
+            .content-section {
+                padding: 3rem 0;
+            }
+            
+            .nav-dots {
+                right: 0.5rem;
+            }
+            
+            .album-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .knob {
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Dots -->
+    <div class="nav-dots">
+        <div class="nav-dot active" data-section="intro"></div>
+        <div class="nav-dot" data-section="beginning"></div>
+        <div class="nav-dot" data-section="collaboration"></div>
+        <div class="nav-dot" data-section="breakthrough"></div>
+        <div class="nav-dot" data-section="challenges"></div>
+        <div class="nav-dot" data-section="future"></div>
+    </div>
+    
+    <!-- Intro Section -->
+    <section id="intro" class="parallax-container">
+        <div class="grid-pattern"></div>
+        <img src="https://i.pinimg.com/736x/16/cc/b1/16ccb10a5e5dc2272dfa1ddba83b2d32.jpg" alt="Anime Style Background" class="parallax-bg">
+        <div class="container h-full flex flex-col justify-center items-center text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 glitch" data-text="SONIC JOURNEY">SONIC JOURNEY</h1>
+            <h2 class="text-2xl md:text-4xl neon-text mb-12">THE BLVCKHXXD STORY</h2>
+            <p class="text-xl max-w-2xl mb-8">An interactive memoir of how a passion for music production grew into something extraordinary.</p>
+            <a href="#beginning" class="btn">BEGIN JOURNEY</a>
+        </div>
+        <div class="scroll-downs">
+            <div class="mousey">
+                <div class="scroller"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Beginning Section -->
+    <section id="beginning" class="content-section relative">
+        <div class="grid-pattern"></div>
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl neon-text mb-8">THE BEGINNING</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">11th Grade Discovery</h3>
+                        <p class="mb-4">I started making music when I was in 11th grade. At that time I didn't know anything about how to make music and just like everything I decided to teach myself how to make music so I can do something else as well that I love along with my other passions and past time things.</p>
+                        <div class="mb-8 neon-border p-4 bg-black bg-opacity-50">
+                            <p class="italic text-gray-300">"I had no idea where to start, but I was determined to figure it out."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Finding Ableton</h3>
+                        <p class="mb-4">Naturally I researched on how to make music and what are the best DAW's (Digital Audio Workstations) are. Eventually I stumbled upon Ableton that stuck with me purely out of its ability to have vibrant colors that you can make to different audio tracks to differentiate them.</p>
+                        <div class="my-8">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTnMg0otErvNlbNQB5S8mUjjrUo4i-7osn0w&s" alt="Learning Process" class="rounded-lg neon-border">
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Exploring Sample Packs</h3>
+                        <p class="mb-4">I didn't know where to start, so I started looking up some more, I came across sample tracks and sample packs that were free for producers and websites that would provide them in bulk. So I had an idea to use sample tracks when I make music.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">First Setup</h3>
+                        <p class="mb-4">My first computer was my Imac from mid 2010s, pretty old but the speakers were good so I stuck with it. Ableton ran surprisingly good on it. I started experimenting with the sample packs and eventually got hang of it. This took me about a week.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Distribution Research</h3>
+                        <p class="mb-4">I started thinking about how am I going to distribute these? I looked distribution companies and did my research, I found distrokid to be the most favorable. Great at the price it was and pretty nice options. So I went with it. Purchased it and then thought to actually get onto making music.</p>
+                    </div>
+                </div>
+                
+                <!-- What If Scenario -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">WHAT IF: You hadn't pursued music?</h3>
+                    <div class="choice-container">
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Reality</h4>
+                            <p>I followed my curiosity and taught myself music production, discovering a passion that would lead to unexpected success.</p>
+                        </div>
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Alternate Path</h4>
+                            <p>I would have missed out on discovering a creative talent and the thrill of sharing my music with thousands of listeners worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ableton Experience -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">INTERACTIVE: Experience Ableton</h3>
+                    <div class="ableton-interface">
+                        <div class="knob-container">
+                            <div class="knob">
+                                <svg width="80" height="80" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="8" fill="none"/>
+                                    <circle class="knob-indicator" cx="50" cy="50" r="40" stroke="var(--neon-pink)" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="188.4"/>
+                                    <line x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="2" class="knob-line" transform="rotate(45 50 50)"/>
+                                </svg>
+                                <div class="knob-label">Reverb</div>
+                            </div>
+                            
+                            <div class="knob">
+                                <svg width="80" height="80" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="8" fill="none"/>
+                                    <circle class="knob-indicator" cx="50" cy="50" r="40" stroke="var(--neon-blue)" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="125.6"/>
+                                    <line x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="2" class="knob-line" transform="rotate(120 50 50)"/>
+                                </svg>
+                                <div class="knob-label">Pitch</div>
+                            </div>
+                            
+                            <div class="knob">
+                                <svg width="80" height="80" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="40" stroke="#333" stroke-width="8" fill="none"/>
+                                    <circle class="knob-indicator" cx="50" cy="50" r="40" stroke="var(--neon-purple)" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="62.8"/>
+                                    <line x1="50" y1="50" x2="50" y2="20" stroke="white" stroke-width="2" class="knob-line" transform="rotate(180 50 50)"/>
+                                </svg>
+                                <div class="knob-label">Filter</div>
+                            </div>
+                        </div>
+                        
+                        <div class="slider-container">
+                            <p class="mb-2">BPM: <span id="bpm-value">128</span></p>
+                            <input type="range" min="80" max="180" value="128" class="slider" id="bpm-slider">
+                        </div>
+                        
+                        <div class="track-container">
+                            <div class="track-waveform" id="waveform">
+                                <!-- Waveform bars generated by JS -->
+                            </div>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button class="btn" id="play-button">
+                                <i class="fas fa-play"></i> Play
+                            </button>
+                            <button class="btn">
+                                <i class="fas fa-save"></i> Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Collaboration Section -->
+    <section id="collaboration" class="content-section relative">
+        <div class="grid-pattern"></div>
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl neon-text mb-8">FINDING A PARTNER</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">The Chance Meeting</h3>
+                        <p class="mb-4">I started making Rap/Hip-Hop beats at first and in the middle of making it, I found one my classmates who was new to the school and came when we started 11th grade to be an audio engineer and also a music producer. Naturally we hit it off and we had a lot in common.</p>
+                        <div class="mb-8 neon-border p-4 bg-black bg-opacity-50">
+                            <p class="italic text-gray-300">"I told him about my plans and how I am making music and how I started. He was hesitant to do it at first."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">The First Album</h3>
+                        <p class="mb-4">I made my complete album, designed the cover art and uploaded it to distrokid. My very first album that I made was up and I was overjoyed. I started telling all my friends and even posted about it on my insta.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">The Collaboration Begins</h3>
+                        <p class="mb-4">My friend eventually thought about it and he started doing it too. He made a distrokid account and we decided to collab so before that album could release worldwide cause I had a specific time for it, we decided to stop it, add two of his songs that he made first, see how it went and we will go from there.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">RAGE is Born</h3>
+                        <p class="mb-4">The album was hard hitting beats, no vocals, and he came up with two rock and roll instrumentals to put in my song. That Album was Called RAGE. We also added some of his hip hop beats he made as well. It was officially out on March 4th, 2022.</p>
+                        <div class="my-6">
+                            <h4 class="text-xl mb-2">Featured Track: MAFIA</h4>
+                            <div class="audio-player">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/216954786&color=%23ff00ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <div class="mt-4">
+                                    <a href="https://www.youtube.com/watch?v=jndPYBA9DZc" target="_blank" class="btn">
+                                        <i class="fab fa-youtube"></i> Listen on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">First Taste of Success</h3>
+                        <p class="mb-4">That album actually did pretty well and we were both shocked. Not thousands of plays but hundreds for our first album ever and we weren't even that experienced. Our friends were ecstatic, our families got to know about this and of course they were skeptical at first but later they were happy which happened later.</p>
+                    </div>
+                </div>
+                
+                <!-- What If Scenario -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">WHAT IF: You hadn't met your collaborator?</h3>
+                    <div class="choice-container">
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Reality</h4>
+                            <p>Working with my classmate brought new perspectives, skills, and motivation to my music, helping me reach heights I couldn't have reached alone.</p>
+                        </div>
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Alternate Path</h4>
+                            <p>Without my collaborator, I would still be producing but would have struggled to reach wider audiences. I'd be stuck with tens or hundreds of plays and listeners.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Breakthrough Section -->
+    <section id="breakthrough" class="content-section relative">
+        <div class="grid-pattern"></div>
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl neon-text mb-8">THE BREAKTHROUGH</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">New Direction</h3>
+                        <p class="mb-4">Since we made something that was more towards energy filled beats, we decided to make a slow album or more like I did and I wanted it to have inclusion from drill genre as well. I made some slow drill beats and some slow hip hop beats.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">The Whoopty Inspiration</h3>
+                        <p class="mb-4">Here is where everything changed for us. I listened to a song called whoopty by CJ and I was huge into drill music and still am. I loved the beat and the melody. I sampled the vocal chop used in that song and I told my friend that I was going to make it into a new drill beat.</p>
+                        <div class="mb-8 neon-border p-4 bg-black bg-opacity-50">
+                            <p class="italic text-gray-300">"He asked for that sample too and we both made our versions. He came up with an amazing beat and we decided to go for his."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">HEARTBREAK Album</h3>
+                        <p class="mb-4">We released the album and we couldn't be more shocked. That song went on to become the most streamed song in that album, with over a thousand plays and it was going crazy on YouTube as well. That Album was Called HEARTBREAK and it was released on April 15, 2022, just a month after our first.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Unexpected Success</h3>
+                        <p class="mb-4">WHOOPTY Remix exploded in popularity. We were shocked. We were committed and inspired. This was the track that would define our journey and open new doors we never imagined.</p>
+                        <div class="my-6">
+                            <h4 class="text-xl mb-2">Featured Track: WHOOPTY Remix</h4>
+                            <div class="audio-player">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/216954786&color=%23ff00ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <div class="mt-4">
+                                    <a href="https://www.youtube.com/watch?v=oQYQdtCmKlw" target="_blank" class="btn">
+                                        <i class="fab fa-youtube"></i> Listen on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- What If Scenario -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">WHAT IF: You hadn't created Whoopty Remix?</h3>
+                    <div class="choice-container">
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Reality</h4>
+                            <p>Creating the WHOOPTY Remix was our breakthrough moment, gaining us over 500K plays and significantly expanding our audience.</p>
+                        </div>
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Alternate Path</h4>
+                            <p>Without our viral hit mixing drill and dance elements, we wouldn't have reached such wide audiences or built the momentum for future releases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Challenges Section -->
+    <section id="challenges" class="content-section relative">
+        <div class="grid-pattern"></div>
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl neon-text mb-8">CHALLENGES & GROWTH</h2>
+                <div class="my-8">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWnvbdQHfFLwbuR1eoH1m0MiwORgey_m-bAA&s" alt="Challenges Image" class="rounded-lg neon-border w-full">
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Single Releases</h3>
+                        <p class="mb-4">After the success of HEARTBREAK, I released a single called LIEz on April 30, 2022, sampling Aliez from Aldnoah Zero and that didn't do well. I admit I got carried away and it didn't turn out good.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Learning from Failure</h3>
+                        <p class="mb-4">I was disheartened after the success we saw from HEARTBREAK, to see this flop on my end. I figured it was good cause I got humbled. This was an important lesson in my journey.</p>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">The Last of Us</h3>
+                        <p class="mb-4">Then we sampled The Last of Us theme and that went well and was released on July 13, 2022. This helped restore some of my confidence after the previous setback.</p>
+                        <div class="my-6">
+                            <h4 class="text-xl mb-2">Featured Track: The Last of Us</h4>
+                            <div class="audio-player">
+                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/216954786&color=%23ff00ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                                <div class="mt-4">
+                                    <a href="https://www.youtube.com/watch?v=A9EZtqnzhfc" target="_blank" class="btn">
+                                        <i class="fab fa-youtube"></i> Listen on YouTube
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <h3 class="text-2xl neon-text-blue mb-2">Continuous Creation</h3>
+                        <p class="mb-4">After that I got busy and released less often but still thrilled to release any way. I continued to produce new music whenever I could find time.</p>
+                    </div>
+                </div>
+                
+                <!-- What If Scenario -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">WHAT IF: You had lost motivation after The Last of Us?</h3>
+                    <div class="choice-container">
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Reality</h4>
+                            <p>Despite setbacks, I persevered and continued creating music, eventually releasing more albums and growing as an artist.</p>
+                        </div>
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Alternate Path</h4>
+                            <p>I might have taken a break, but my passion for music would have eventually drawn me back. I would likely have asked my collaborator for help to regain momentum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Future Section -->
+    <section id="future" class="content-section relative">
+        <div class="grid-pattern"></div>
+        <div class="container">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-5xl neon-text mb-8">THE JOURNEY CONTINUES</h2>
+                <p class="text-xl mb-8">From RAGE to DRAGON BALL and beyond, my music production journey has been one of growth, challenges, and unexpected success. With 3500 monthly listeners on Spotify, 500K plays of WHOOPTY Remix, and over a million plays on YouTube, what started as curiosity has become something much bigger.</p>
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl neon-text-blue mb-4">My Promise</h3>
+                    <div class="neon-border p-6 bg-black bg-opacity-70">
+                        <p class="text-xl">I stopped releasing after DRAGON BALL cause I just lost the motivation, I was tired and I had less free time. I was going into my third year. But I planned to release more in the future. Whenever that may be cause I promised myself to never give up and fight through life to do what I truly love.</p>
+                    </div>
+                </div>
+                
+                <div class="mb-12">
+                    <h3 class="text-2xl neon-text mb-4">ALBUM SHOWCASE</h3>
+                    <button id="open-album-showcase" class="btn mb-4">View All Albums</button>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="album-card">
+                            <img src="https://page1.genspark.site/v1/base64_upload/49697ccc377879bb6cd0ff824fbefbcf" alt="RAGE" class="w-full">
+                        </div>
+                        <div class="album-card">
+                            <img src="https://page1.genspark.site/v1/base64_upload/397deebee38abe051f156e414250d354" alt="HEARTBREAK" class="w-full">
+                        </div>
+                        <div class="album-card">
+                            <img src="https://page1.genspark.site/v1/base64_upload/c4964246ca943653c16e0ff5e7de5b55" alt="THE LAST OF US" class="w-full">
+                        </div>
+                        <div class="album-card">
+                            <img src="https://page1.genspark.site/v1/base64_upload/42832edf98407301e08d63a379242a78" alt="DRAGON BALL" class="w-full">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- What If Scenario -->
+                <div class="mt-12">
+                    <h3 class="text-2xl neon-text mb-4">WHAT IF: You hadn't continued after May 2024?</h3>
+                    <div class="choice-container">
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Reality</h4>
+                            <p>I'm committed to continuing my music journey, with plans for new releases and further development of my sound and style.</p>
+                        </div>
+                        <div class="choice-box">
+                            <h4 class="text-xl mb-2">Alternate Path</h4>
+                            <p>If I had given up, all the momentum built over years would be lost. My artist identity would fade, and I'd lose the creative outlet that brings me joy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl neon-text mb-4">MY MUSIC PRODUCTION JOURNEY IN NUMBERS</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="p-6 neon-border bg-black bg-opacity-70">
+                            <div class="text-4xl font-bold mb-2 neon-text">3,500+</div>
+                            <p>Monthly Listeners</p>
+                        </div>
+                        <div class="p-6 neon-border bg-black bg-opacity-70">
+                            <div class="text-4xl font-bold mb-2 neon-text">500K+</div>
+                            <p>Plays on WHOOPTY Remix</p>
+                        </div>
+                        <div class="p-6 neon-border bg-black bg-opacity-70">
+                            <div class="text-4xl font-bold mb-2 neon-text">1M+</div>
+                            <p>YouTube Views</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <a href="#intro" class="btn">RESTART JOURNEY</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Album Showcase Popup -->
+    <div id="album-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-close" id="close-popup">
+                <i class="fas fa-times"></i>
+            </div>
+            <h2 class="text-3xl md:text-4xl neon-text mb-6">BLVCKHXXD DISCOGRAPHY</h2>
+            <p class="mb-6">Explore the full catalog of albums and singles released throughout my music production journey.</p>
+            
+            <div class="album-grid">
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/49697ccc377879bb6cd0ff824fbefbcf" alt="RAGE" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">RAGE</h4>
+                        <p class="text-sm text-gray-300">March 4, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/397deebee38abe051f156e414250d354" alt="HEARTBREAK" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">HEARTBREAK</h4>
+                        <p class="text-sm text-gray-300">April 15, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/c4964246ca943653c16e0ff5e7de5b55" alt="THE LAST OF US" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">THE LAST OF US</h4>
+                        <p class="text-sm text-gray-300">July 13, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/a573fdd5cbb89f05ada2ba6d001af153" alt="HEIGHTS" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">HEIGHTS</h4>
+                        <p class="text-sm text-gray-300">August 26, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/307bd4ace73dfc41b08392f346b8fc04" alt="THE GODFATHER" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">THE GODFATHER</h4>
+                        <p class="text-sm text-gray-300">October 21, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/31d5fb81e9e8480dada1eb7969e1a28e" alt="A NEW WORLD" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">A NEW WORLD</h4>
+                        <p class="text-sm text-gray-300">October 21, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/01f4dcc7414edb477a91fb71c73206c7" alt="REMORSE" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">REMORSE</h4>
+                        <p class="text-sm text-gray-300">December 10, 2022</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/8f54e95ce5befa7d281a2acd356e3406" alt="BUBBLEZ!" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">BUBBLEZ!</h4>
+                        <p class="text-sm text-gray-300">December 8, 2023</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/aca6608206ce31c2e966a3bf7eef5019" alt="RAGE PT.II" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">RAGE PT.II</h4>
+                        <p class="text-sm text-gray-300">February 18, 2024</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/42832edf98407301e08d63a379242a78" alt="DRAGON BALL" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">DRAGON BALL</h4>
+                        <p class="text-sm text-gray-300">May 21, 2024</p>
+                    </div>
+                </div>
+                <div class="album-card">
+                    <img src="https://page1.genspark.site/v1/base64_upload/265e166c0cb3e2554c94d6a87ef0eb68" alt="NEON DREAMS" class="w-full">
+                    <div class="mt-2">
+                        <h4 class="text-lg font-bold">NEON DREAMS</h4>
+                        <p class="text-sm text-gray-300">Coming Soon</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.11.4/dist/ScrollTrigger.min.js"></script>
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Parallax effect
+        document.querySelectorAll('.parallax-container').forEach(container => {
+            const bg = container.querySelector('.parallax-bg');
+            
+            gsap.to(bg, {
+                y: 200,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: container,
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+        
+        // Section animations
+        document.querySelectorAll('.content-section').forEach(section => {
+            gsap.fromTo(section.querySelector('h2'), 
+                {opacity: 0, y: 50},
+                {
+                    opacity: 1, 
+                    y: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%"
+                    }
+                }
+            );
+            
+            gsap.fromTo(section.querySelectorAll('.timeline-item'), 
+                {opacity: 0, x: -50},
+                {
+                    opacity: 1, 
+                    x: 0,
+                    stagger: 0.2,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 70%"
+                    }
+                }
+            );
+        });
+        
+        // Navigation dots
+        const sections = document.querySelectorAll('section');
+        const navDots = document.querySelectorAll('.nav-dot');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - sectionHeight/3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navDots.forEach(dot => {
+                dot.classList.remove('active');
+                if(dot.getAttribute('data-section') === current) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+        
+        navDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const targetSection = document.getElementById(this.getAttribute('data-section'));
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Ableton Interface
+        const knobs = document.querySelectorAll('.knob');
+        const bpmSlider = document.getElementById('bpm-slider');
+        const bpmValue = document.getElementById('bpm-value');
+        const playButton = document.getElementById('play-button');
+        const waveform = document.getElementById('waveform');
+        
+        // Generate waveform
+        function generateWaveform() {
+            waveform.innerHTML = '';
+            const barCount = 50;
+            
+            for(let i = 0; i < barCount; i++) {
+                const height = Math.random() * 60 + 10;
+                const bar = document.createElement('div');
+                bar.className = 'waveform-bar';
+                bar.style.height = `${height}px`;
+                waveform.appendChild(bar);
+            }
+        }
+        
+        generateWaveform();
+        
+        // Make knobs interactive
+        knobs.forEach(knob => {
+            const knobIndicator = knob.querySelector('.knob-indicator');
+            const knobLine = knob.querySelector('.knob-line');
+            let rotating = false;
+            let startAngle = 0;
+            
+            knob.addEventListener('mousedown', function(e) {
+                rotating = true;
+                const knobRect = knob.getBoundingClientRect();
+                const knobCenterX = knobRect.left + knobRect.width / 2;
+                const knobCenterY = knobRect.top + knobRect.height / 2;
+                startAngle = Math.atan2(e.clientY - knobCenterY, e.clientX - knobCenterX);
+                
+                e.preventDefault();
+            });
+            
+            document.addEventListener('mousemove', function(e) {
+                if(!rotating) return;
+                
+                const knobRect = knob.getBoundingClientRect();
+                const knobCenterX = knobRect.left + knobRect.width / 2;
+                const knobCenterY = knobRect.top + knobRect.height / 2;
+                const angle = Math.atan2(e.clientY - knobCenterY, e.clientX - knobCenterX);
+                
+                const rotation = ((angle - startAngle) * 180 / Math.PI);
+                let currentRotation = parseFloat(knobLine.getAttribute('transform').replace('rotate(', '').replace(' 50 50)', ''));
+                let newRotation = currentRotation + rotation;
+                
+                // Limit rotation to 0-270 degrees
+                newRotation = Math.max(0, Math.min(270, newRotation));
+                
+                knobLine.setAttribute('transform', `rotate(${newRotation} 50 50)`);
+                
+                // Update stroke-dashoffset for circle indicator
+                const circumference = 2 * Math.PI * 40;
+                const dashOffset = circumference - (newRotation / 270) * (circumference * 0.75);
+                knobIndicator.style.strokeDashoffset = dashOffset;
+                
+                startAngle = angle;
+                
+                // Update waveform to simulate effect
+                updateWaveformEffect();
+            });
+            
+            document.addEventListener('mouseup', function() {
+                rotating = false;
+            });
+        });
+        
+        // BPM slider
+        bpmSlider.addEventListener('input', function() {
+            bpmValue.textContent = this.value;
+            updateWaveformEffect();
+        });
+        
+        // Play button
+        let isPlaying = false;
+        playButton.addEventListener('click', function() {
+            isPlaying = !isPlaying;
+            
+            if(isPlaying) {
+                this.innerHTML = '<i class="fas fa-pause"></i> Pause';
+                animateWaveform();
+            } else {
+                this.innerHTML = '<i class="fas fa-play"></i> Play';
+                cancelAnimationFrame(waveformAnimation);
+            }
+        });
+        
+        let waveformAnimation;
+        function animateWaveform() {
+            const bars = document.querySelectorAll('.waveform-bar');
+            
+            bars.forEach(bar => {
+                const height = Math.random() * 60 + 10;
+                gsap.to(bar, {
+                    height: `${height}px`,
+                    duration: 0.2,
+                    ease: "none"
+                });
+            });
+            
+            waveformAnimation = requestAnimationFrame(animateWaveform);
+        }
+        
+        function updateWaveformEffect() {
+            const bars = document.querySelectorAll('.waveform-bar');
+            const bpm = parseInt(bpmSlider.value);
+            
+            bars.forEach((bar, index) => {
+                let height;
+                
+                // Create different patterns based on BPM
+                if (bpm < 100) {
+                    height = Math.sin(index * 0.2) * 30 + 30;
+                } else if (bpm < 140) {
+                    height = Math.sin(index * 0.3) * 25 + 35;
+                } else {
+                    height = Math.sin(index * 0.4) * 20 + 40;
+                }
+                
+                bar.style.height = `${height}px`;
+            });
+        }
+        
+        // Album Popup
+        const openAlbumBtn = document.getElementById('open-album-showcase');
+        const closePopupBtn = document.getElementById('close-popup');
+        const albumPopup = document.getElementById('album-popup');
+        
+        openAlbumBtn.addEventListener('click', function() {
+            albumPopup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closePopupBtn.addEventListener('click', function() {
+            albumPopup.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close popup when clicking outside content
+        albumPopup.addEventListener('click', function(e) {
+            if (e.target === albumPopup) {
+                albumPopup.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Initial animations when page loads
+        window.addEventListener('load', function() {
+            gsap.fromTo('#intro h1', 
+                {opacity: 0, y: -50},
+                {opacity: 1, y: 0, duration: 1.5}
+            );
+            
+            gsap.fromTo('#intro h2', 
+                {opacity: 0},
+                {opacity: 1, duration: 1.5, delay: 0.5}
+            );
+            
+            gsap.fromTo('#intro p', 
+                {opacity: 0, y: 30},
+                {opacity: 1, y: 0, duration: 1.5, delay: 1}
+            );
+            
+            gsap.fromTo('#intro .btn', 
+                {opacity: 0, y: 30},
+                {opacity: 1, y: 0, duration: 1.5, delay: 1.5}
+            );
+        });
+    </script>
+</body>
+</html>
